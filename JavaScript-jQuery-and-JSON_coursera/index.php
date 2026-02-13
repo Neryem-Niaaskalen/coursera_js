@@ -11,7 +11,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meryem Niaaskalen's Resume Registry</title>
+   <title name="<?php echo isset($_SESSION['name']) ? htmlentities($_SESSION['name']) : 'Meryem Niaaskalen'; ?>">Meryem Niaaskalen's Resume Registry</title>
     <?php require_once "bootstrap.php"; ?>
 </head>
 <body>
@@ -77,4 +77,5 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </p>
 </div>
 </body>
+
 </html>
